@@ -3,11 +3,11 @@ import MovieListItem from './movieListItem';
 
 
 
-const MovieList = ({ results, openPopup }) => {
+const MovieList = ({ results, openDetail }) => {
 	return (
 		<section className="results">
 			{results.map(result => (
-				<MovieListItem key={result.imdbID} result={result} openPopup={openPopup} />
+				<MovieListItem key={result.imdbID} result={result} openDetail={openDetail} />
 			))}
 		</section>
 	)

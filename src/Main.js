@@ -6,6 +6,7 @@ import axios from 'axios'
 import MovieList from './components/Movie/movieList';
 import SearchBar from './components/searchBar';
 import SelectedMovie from './components/Movie/selectedMovie';
+import Header from './components/header';
 
 
 const App = () => {
@@ -36,7 +37,7 @@ const App = () => {
     });
   }
 
-  const openPopup = id => {
+  const openDetail = id => {
     axios(apiurl + "&i=" + id).then(({ data }) => {
       let result = data;
 
@@ -48,24 +49,28 @@ const App = () => {
     });
   }
 
-  const closePopup = () => {
+  const closeDetail = () => {
     setState(prevState => {
       return { ...prevState, selected: {} }
     });
   }
 
   return (
+    <div>
+    <Header />
     <div className="App">
-      <header>
+      
+      {/* <header>
         <h1>Movie Search App</h1>
-      </header>
+      </header> */}
       <main>
         <SearchBar handleInput={handleInput} search={search} />
 
-        <MovieList results={state.results} openPopup={openPopup} />
+        <MovieList results={state.results} openDetail={openDetail} />
 
-        {(typeof state.selected.Title != "undefined") ? <SelectedMovie selected={state.selected} closePopup={closePopup} /> : false}
+        {(typeof state.selected.Title != "undefined") ? <SelectedMovie selected={state.selected} closeDetail={closeDetail} /> : false}
       </main>
+    </div>
     </div>
   );
 }
