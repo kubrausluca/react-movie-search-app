@@ -1,0 +1,512 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'montserrat', sans-serif;
+	background-color: #223343;
+}
+
+header {
+	padding: 50px 15px 0px;
+}
+
+header h1 {
+	color: #FFF;
+	font-size: 48px;
+	font-weight: 500;
+	text-align: center;
+}
+
+main {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 15px;
+}
+
+.searchbox {
+	display: block;
+	width: 100%;
+	padding: 15px;
+
+	border: none;
+	outline: none;
+	background: none;
+
+	background-color: #EEE;
+	border-radius: 8px;
+
+	color: #53565A;
+	font-size: 20px;
+	font-weight: 300;
+
+	transition: 0.4s ease-out;
+}
+
+.searchbox:focus {
+	box-shadow: 0px 0px 8px 3px #4484C4;
+}
+
+.results {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px;
+}
+
+.results .result {
+	width: 33.333%;
+	min-width: 250px;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.results .result img {
+	display: block;
+	width: 100%;
+}
+
+.results .result h3 {
+	color: #FFF;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px;
+	background: #445565;
+	flex: 1 1 100%;
+	transition: 0.4s ease-out;
+}
+
+.results .result:hover h3 {
+	background: #FFF;
+	color: #223343;
+}
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #445565;
+
+	overflow-y: scroll;
+}
+
+.popup .content {
+	display: block;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 25px;
+
+	color: #FFF;
+}
+
+.popup .content h2 {
+	font-size: 28px;
+	font-weight: 600;
+}
+.popup .content h2 span {
+	font-weight: 300;
+	font-size: 20px;
+}
+
+.popup .content .rating {
+	margin-bottom: 30px;
+}
+
+.popup .content .plot {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px 30px;
+}
+
+.popup .content .plot img {
+	flex: 1 1 50%;
+	max-width: 500px;
+	justify-content: center;
+	resize: both;
+	padding: 0px 15px;
+}
+
+.popup .content .plot p {
+	flex: 1 1 50%;
+	padding: 15px;
+}
+
+.popup .content .close {
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 18px;
+	font-weight: 700;
+
+	background: #4484C4;
+	color: #FFF;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	appearance: none;
+	cursor: pointer;
+
+	transition: 0.4s ease-out;
+}
+
+.popup .content .close:hover {
+	background: #223343;
+}
+
+.small-text {
+	font-size: 12px;
+	color: #18121E;
+  }
+  
+  .card {
+	display: inline-block;
+	text-align: center;
+	margin: 0 10px 50px 10px;
+  }
+  
+  .card p {
+	margin: 12px auto;
+	width: 190px;
+	height: 20px;
+  }
+  
+  .card-img {
+	height: 300px;
+	width: 200px;
+	margin: 0 auto;
+	box-shadow: 2px 2px 2px #233237;
+  }
+  
+  .card-img img {
+	height: 100%;
+	width: 100%;
+  }
+  
+  .card-img:hover {
+	cursor: pointer;
+	box-shadow: 4px 4px 5px #984B43;
+	transition: .2s;
+  }
+  
+  .loader {
+	margin: 50px auto;
+  }
+  
+  
+  /*SEARCH BARS STYLES*/
+  
+  .title {
+	display: inline-block;
+	padding-top: 5px;
+	width: 94%;
+	margin: 10px auto;
+  }
+  
+  .search-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-left: 48px;
+	padding: 20px 0;
+  }
+  
+  .search-bar input {
+	height: 30px;
+	width: 30%;
+	font-size: 16px;
+	padding-right: 70px;
+	margin-right: 70px;
+	margin-top: -5px;
+  }
+  
+  /*WATCH LIST*/
+  
+  .watchList {
+	display: none;
+	position: absolute;
+	background: #18121E;
+	padding: 15px 25px;
+	width: 350px;
+	margin: -15px 0 0 -282px;
+	color: white;
+	list-style: none;
+	border: 2px solid #EAC67A;
+  }
+  
+  .watchListTitle {
+	display: inline-block;
+	border: 1px solid black;
+	padding: 4px 12px;
+	margin-right: 90px;
+	cursor: pointer;
+	user-select: none;
+  }
+  
+  .watchList li {
+	padding: 6px 5px;
+	cursor: pointer;
+  }
+  
+  .watchList p {
+	color: lightgrey;
+  }
+  
+  .fas {
+	color: red;
+	margin-right: 8px;
+  }
+  
+  
+  /*------ Selected Movie Styles ------*/
+  .big-container {
+	display: flex;
+	background: #18121E;
+	width: 100%;
+	padding-bottom: 150px; 
+	border-top: 3px solid #984B43;
+  }
+  
+  .selected-container {
+	display: flex;
+	justify-content: center;
+	border-radius: 5px;
+	margin: 25px auto; 
+	width: 70%;
+	padding-top: 20px;
+  }
+  
+  .selected-container h2 {
+	color: #EAC67A;
+  }
+  
+  .poster-frame {
+	height: 90%;
+	max-height: 450px;
+	min-width: 300px;
+  }
+  
+  .poster-frame img {
+	height: 100%;
+	width: 100%;
+	border-radius: 2px;
+  }
+  
+  .movie-details {
+	display: flex;
+	flex-direction: column;
+	margin-left: 75px;
+	color: white;
+	height: 100%;
+	width: 70%;
+  }
+  
+  .movie-details-header {
+	display: flex;
+	margin-bottom: 10px;
+  }
+  
+  .ratings ul {
+	list-style: none;
+	line-height: 32px;
+	margin-left: 50px;
+  }
+  
+  .movie-details-main a {
+	color: white;
+  }
+  
+  #yellow {
+	color: #EAC67A;
+  }
+  
+  #genre {
+	color: grey;
+	font-size: 12px;
+	margin: -12px 0;
+  }
+  
+  .unselected-container {
+	display: flex;
+	flex-direction: column;
+	margin: 30px auto;
+	width: 55%;
+	color: white;
+  }
+  
+  .unselected-container h1 {
+	font-size: 100px;
+	margin-bottom: -25px; 
+  }
+  
+  .unselected-container h2 {
+	margin-left: 5px; 
+  }
+  
+  #watchStar {
+	position: absolute;
+	color: #EAC67A;
+	z-index: 100;
+	font-size: 1.5em;
+	margin-left: -25px;
+	margin-top: -20px;
+	background: #18121E;
+	padding: 7px;
+	border-radius: 100%;
+	border: 1px dashed #EAC67A;
+  }
+  
+  
+  
+  
+  @media only screen and (max-width: 1480px) {
+	.movie-details-header {
+	  flex-direction: column;
+	}
+  
+	.ratings ul {
+	  margin: 0;
+	  padding: 0 0 40px 0;
+	}
+  
+	.card-img {
+	  height: 220px;
+	  width: 150px;
+	}
+  
+	.container {
+	  height: 400px;
+	  width: 90%;
+	}
+  
+  
+	.unselected-container h1 {
+	  font-size: 70px; 
+	}
+  
+  }
+  
+  @media only screen and (max-width: 768px) {
+	.title {
+	  width: 87%;
+	}
+  
+	.card-img {
+	  height: 180px;
+	  width: 120px;
+	}
+  
+	.card p {
+	  margin: 12px auto;
+	  width: 120px;
+	  height: 35px;
+	}
+  
+	.poster-frame {
+	  height: 80%;
+	  max-height: 300px;
+	  min-width: 200px;
+	}
+  
+	.movie-details {
+	  display: flex;
+	  flex-direction: column;
+	  margin-left: 30px;
+	  color: white;
+	  height: 95%;
+	  width: 100%;
+	}
+  
+	.unselected-container h1 {
+	  font-size: 40px; 
+	  width: 110%;
+	}
+  
+	.unselected-container h2 {
+	  font-size: 20px;
+	  margin: 25px 0;
+	}
+  
+	.movie-details {
+	  font-size: 10px;
+	  width: 120%;
+	}
+  
+	.movie-details-header {
+	  margin-bottom: -10px;
+	}
+  
+	.ratings ul {
+	  list-style: none;
+	  line-height: 15px;
+	}
+  
+	#genre {
+	  font-size: 1em;
+	  padding: 2px 0 5px 0;
+	}
+  }
+  
+  @media only screen and (max-width: 540px) { 
+	  
+	  .title {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	  }
+  
+	  .search-bar {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-left: 48px;
+		padding: 20px 0 70px 0;
+	  }
+  
+	  .search-bar input {
+		width: 70%;
+		height: 40px;
+		font-size: 20px;
+		border: 1px solid lightgrey;
+	  }
+  
+	  .poster-frame {
+		height: 60%;
+		max-height: 190px;
+		min-width: 100px;
+	  }
+  
+	  .movie-details-header {
+		margin-bottom: -15px;
+	  }
+  
+	  #watchStar {
+		font-size: 1em;
+		margin-left: -16px;
+		margin-top: -18px;
+		padding: 5px;
+	  }
+  
+	  .watchList {
+		padding: 15px 25px;
+		width: 400px;
+		margin: -16px 0 0 -165px;
+	  }
+  
+	  @media only screen and (max-width: 540px) {
+		.poster-frame {
+		  height: 80%;
+		  max-height: 175px;
+		  min-width: 80px;
+		}
+	  }
+  }
