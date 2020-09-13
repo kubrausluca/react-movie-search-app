@@ -12,6 +12,7 @@ Clone this repository :
 ```bash
 git clone https://github.com/kubrausluca/react-movie-search-app.git
 cd react-movie-search-app
+npm install
 npm start
 ```
 
