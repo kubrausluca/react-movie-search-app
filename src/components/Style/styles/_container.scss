@@ -3,11 +3,12 @@
    overflow: hidden;
    display: block;
    position: relative;
-   background-image:url(https://media.giphy.com/media/VwXcgwGIPyiiY/giphy.gif);
+   background-color: #000a12;
 }
 .container {
   margin-right: auto;
   margin-left: auto;
+  // background-color: #62727b;
 
   @include atMedium {
     padding-right: 18px;
