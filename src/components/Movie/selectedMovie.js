@@ -33,24 +33,23 @@ const SelectedMovie = ({ movieInfo, handleFloatButton }) => {
           <div className="container">
             <div className="grid">
               <div className="grid__image">
-              <img src={Poster} alt={Title} onError={addDefault} />
+              <img style={{ marginRight: 25}} src={Poster} alt={Title} onError={addDefault} />
             </div>
             <div className="grid__content">
-              <h3>{Title} ({Year})</h3>
-              <p><b>Released:</b> {Released}</p>
-              <p><b>Runtime:</b> {Runtime}</p>
-              <p><b>Genre:</b> {Genre}</p>
-              <p><b>Rated:</b> {Rated}</p>
-              <p><b>Actors:</b> {Actors}</p>
-              <p><b>Director:</b> {Director}</p>
-              <p><b>Writer:</b> {Writer}</p>
-              <p><b>Box Office:</b> {BoxOffice}</p>
-              <p><b>Production:</b> {Production}</p>
-              <p><b>Awards:</b> {Awards}</p>
-              <p><b>IMDb Rating:</b> {imdbRating}</p>
-              <p><b>Full Details:</b> <a href={imdb} target="_blank">IMDB</a></p>
+              <h3 id= "text">{Title} ({Year})</h3>
+              <p id="title"><b id="text">Released:</b> {Released}</p>
+              <p id="title"><b id="text">Runtime:</b> {Runtime}</p>
+              <p id="title"><b id="text">Genre:</b> {Genre}</p>
+              <p id="title"><b id="text">Rated:</b> {Rated}</p>
+              <p id="title"><b id="text">Actors:</b> {Actors}</p>
+              <p id="title"><b id="text">Director:</b> {Director}</p>
+              <p id="title"><b id="text">Writer:</b> {Writer}</p>
+              <p id="title"><b id="text">Production:</b> {Production}</p>
+              <p id="title"><b id="text">Awards:</b> {Awards}</p>
+              <p id="title"><b id="text">IMDb Rating:</b> {imdbRating}</p>
+              <p id="title"><b id="text">Full Details:</b> <a  id="title" href={imdb} target="_blank">IMDB</a></p>
             </div>
-              <p className='grid__overview'><b>Overiew:</b> {Plot}</p>
+              {/* <p className='grid__overview'><b>Overiew:</b> {Plot}</p> */}
             </div>
           </div>
         </div>

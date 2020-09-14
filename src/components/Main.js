@@ -49,7 +49,7 @@ class Main extends Component {
     this.state = {
       movies: [],
       movie: {},
-      searchTerm: '',
+      searchTerm: 'pokemon',
       activePage: 1,
       showMovie: false,
       showMovies: false,
@@ -99,7 +99,7 @@ class Main extends Component {
         <SearchBar handleSearch={this.handleSearch} />
         {this.state.showPlaceholder && (
           <div className="container">
-            <h1 className="flex placeholder">Please enter a search term above...</h1>
+            <h1 className="flex placeholder">Please enter a search term...</h1>
           </div>
         )}
         {this.state.showMovies && (

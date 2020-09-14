@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="page-footer">
       <div className="text-center">
-        Footer
+        Copyright &copy; 2020 Movies Search App
       </div>
     </footer>
   );
