@@ -22,7 +22,12 @@ http://www.omdbapi.com/
 
 <table>
   <tr>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/42738275/93031590-bc884180-f634-11ea-983f-fe3308b9eae2.PNG" width="400px"></td>
-    <td valign="top"><img src="https://user-images.githubusercontent.com/42738275/93031562-834fd180-f634-11ea-9ce7-591c4a0ff83d.PNG" width="400px"></td>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/42738275/93144793-8231a980-f6f3-11ea-9e45-d4fe25907935.PNG" width="800px"></td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/42738275/93144848-a3929580-f6f3-11ea-8cff-9c875de99363.PNG" width="800px"></td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="https://user-images.githubusercontent.com/42738275/93144868-b5743880-f6f3-11ea-9418-f63ab9c5b9d8.PNG" width="800px"></td>
   </tr>
  </table>
