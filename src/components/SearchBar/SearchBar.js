@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class SearchBar extends Component {
   constructor(props) {
@@ -32,14 +34,15 @@ class SearchBar extends Component {
                   type="text"
                   value={this.state.input}
                   autoComplete="off"
-                  placeholder="Search"
+                  placeholder="Search..."
                   onChange={this.handleChange}
                   className="search"
                   required
                 />
               <button type="submit" className="iconbox">
                 <span className="iconbox__icon">
-                  <i className="fa fa-search" />
+                  {/* <i style={{ color: 'white'}} class="fa fa-search" aria-hidden="true" /> */}
+                  <FontAwesomeIcon icon={faSearch} />
                 </span>
               </button>
             </div>

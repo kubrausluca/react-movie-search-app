@@ -2,6 +2,8 @@ import React from 'react';
 import MovieListItem from './MovieListItem';
 import Pagination from "react-js-pagination";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { faSortUp} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MovieList = ({handleShowMovie, movies, handleSearch, activePage, searchTerm}) => {
   
@@ -38,12 +40,15 @@ const MovieList = ({handleShowMovie, movies, handleSearch, activePage, searchTer
               />
             </div>
             <AnchorLink href="#pageTop" className="btn-float">
-              <i className="fa fa-chevron-up" />
+              <FontAwesomeIcon 
+                style={{width: "100%" , textAlign: "center", color: '#fff', fontSize: '1.25rem', lineHeight: '55px', justifyContent: "center", marginTop: 15}}
+                icon={faSortUp} 
+              />
             </AnchorLink>
           </div>
         ) : (
           <div className="container">
-            <h1 className="flex">Oops, {movies[0].search}</h1>
+            <h1 className="flex placeholder">Oops, not found :(</h1>
           </div>
         )}
       </section>

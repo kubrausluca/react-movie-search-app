@@ -1,5 +1,7 @@
 import React from 'react';
 import Fade from "react-reveal/Fade";
+import { faBackward} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SelectedMovie = ({ movieInfo, handleFloatButton }) => {
   const addDefault = (e) => {
@@ -52,7 +54,10 @@ const SelectedMovie = ({ movieInfo, handleFloatButton }) => {
         </div>
       </Fade>
       <button onClick={handleFloatButton} className='btn-float'>
-        <i className="fa fa-chevron-left"></i>
+        <FontAwesomeIcon 
+          style={{width: "100%" , textAlign: "center", color: '#fff', fontSize: '1.25rem', lineHeight: '55px', justifyContent: "center"}}
+          icon={faBackward} 
+        />
       </button>
     </section>
   );
