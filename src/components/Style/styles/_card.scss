@@ -18,7 +18,6 @@
       height: 500px;
       width: 300px;
       font-weight: 400;
-      // margin-bottom: 3rem;
       margin: 1rem;
       position: relative;
       display: flex;
@@ -64,10 +63,7 @@
           background-color: $main;
           color: #fff;
           border-radius: 10em;
-          cursor: pointer;
           text-transform: uppercase;
-          white-space: normal;
-          word-wrap: break-word;
           outline: none;
         }
       }

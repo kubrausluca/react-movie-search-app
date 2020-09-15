@@ -4,6 +4,7 @@ import Pagination from "react-js-pagination";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const MovieList = ({handleShowMovie, movies, handleSearch, activePage, searchTerm}) => {
+  
     var ShowList = movies[0].response;
     var MovieListItems = ShowList === 'True' && movies[0].search.map((m, idx) => (
       <MovieListItem
@@ -50,21 +51,3 @@ const MovieList = ({handleShowMovie, movies, handleSearch, activePage, searchTer
 }
 
 export default MovieList;
-
-
-// import React from 'react'
-// import MovieListItem from './movieListItem';
-
-
-
-// const MovieList = ({ results, openDetail }) => {
-// 	return (
-// 		<section className="results">
-// 			{results.map(result => (
-// 				<MovieListItem key={result.imdbID} result={result} openDetail={openDetail} />
-// 			))}
-// 		</section>
-// 	)
-// }
-
-// export default MovieList;
